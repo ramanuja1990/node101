@@ -7,7 +7,7 @@ const PORT = process.env.port || 3000
 const AddressValidatorController = require('./controllers/addressvalidator.ctrl')
 
 app.use(bodyParser.json())
-app.get('/addresses', AddressValidatorController.processRequest);
+app.post('/addresses', AddressValidatorController.processRequest);
 
 
 app.listen(PORT, (err, res) => {
